@@ -1,8 +1,13 @@
-def move_zeros(list):
-    for i in range(0,len(list)):
-        if list[i] == 0:
-            list.append(list[i]) #this will add index of i to the end of the list
-            list.remove(list[i]) #this will remove index of i in it's current index
-    return(list)
+# Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+# Note that you must do this in-place without making a copy of the array.
 
-print(move_zeros([0,0,3,5,0,9,7]))
+# Example 1:
+# Input: nums = [0,1,0,3,12]
+# Output: [1,3,12,0,0]
+
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        for int in range(0,len(nums)):
+            if nums[int] == 0:
+                nums.append(nums[int])
+                nums.remove(nums[int])
