@@ -10,10 +10,9 @@ def palindrome(s):
     string = str(s.lower())
     for value in string:
         if value.isalnum() == True:
-            print(value)
-    #     else:
-    #         string.replace(value,'')
-    # print (string)
-    # return (string)
+            pass
+        else:
+            string.replace(value,'')
+    return (string)
 
 print(palindrome("Hi! My name is Jennifer"))
