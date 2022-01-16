@@ -8,11 +8,10 @@
 
 def palindrome(s):
     string = str(s.lower())
+    new_string = ''
     for value in string:
         if value.isalnum() == True:
-            pass
-        else:
-            string.replace(value,'')
-    return (string)
+            new_string = new_string + value
+    return(new_string)
 
 print(palindrome("Hi! My name is Jennifer"))
