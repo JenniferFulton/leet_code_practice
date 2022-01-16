@@ -12,6 +12,10 @@ def palindrome(s):
     for value in string:
         if value.isalnum() == True:
             new_string = new_string + value
-    return(new_string)
+    if new_string == new_string[::-1]:
+        return True
+    else:
+        return False
 
 print(palindrome("Hi! My name is Jennifer"))
+print(palindrome("racecar"))
