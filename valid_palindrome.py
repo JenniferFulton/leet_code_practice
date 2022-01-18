@@ -7,12 +7,8 @@
 #     def isPalindrome(self, s: str) -> bool:
 
 def palindrome(s):
-    string = str(s.lower())
-    new_string = ''
-    for value in string:
-        if value.isalnum() == True:
-            new_string = new_string + value
-    if new_string == new_string[::-1]:
+    string = ''.join(filter(str.isalnum, s.lower()))
+    if string == string[::-1]:
         return True
     else:
         return False
