@@ -9,3 +9,12 @@
 # Input: nums = [1,2,3,4]
 # Output: false
 
+def contains_duplicate(nums):
+    for i in nums:
+        if nums.count(nums[i]) > 1:
+            return False
+        else:
+            return True
+
+print(contains_duplicate([1,2,3,4]))
+print(contains_duplicate([2,4,4,6]))
