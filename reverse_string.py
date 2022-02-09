@@ -14,4 +14,4 @@ def reverse(list):
         list [len(list)-1-i] = temp
     return list
 
-print(reverse([1,2,3,4,5]))
+print(reverse(['j','e','n','n','i','f','e','r']))
