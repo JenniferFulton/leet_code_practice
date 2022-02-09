@@ -7,13 +7,10 @@
 # Input: x = 123
 # Output: 321
 
+
+
 def reverse_int(x):
     num = str(x)
-    for i in range(round(len(num)/2)):
-        temp = num[i]
-        num[i] = num[len(num)-1-i]
-        num[len(num)-1-i] = temp
-
-    return(int(num))
+    return(int(num[::-1]))
 
 print(reverse_int(6509))
