@@ -1,9 +1,12 @@
 # 1. Multiples of Three – but Not All
 # Using FOR, print multiples of 3 from -300 to 0. Skip -3 and -6.
-
+for i in range(-300,0,3):
+    if i != -6 and i != -3:
+        print(i)
 
 # 2. Printing Integers with While
 # Print integers from 2000 to 5280, using a WHILE.
+
 
 
 # 3. Counting, the Dojo Way
