@@ -6,8 +6,10 @@ for i in range(-300,0,3):
 
 # 2. Printing Integers with While
 # Print integers from 2000 to 5280, using a WHILE.
-
-
+x = 2000
+while x >= 2000 and x <= 5280:
+    print(x)
+    x += 1
 
 # 3. Counting, the Dojo Way
 # Print integers 1 to 100. If divisible by 5, print "Coding" instead. 
