@@ -19,8 +19,6 @@
 # Create a standalone function that accepts two arrays and combines their values sequentially into a new array. 
 # Extra values from either array should be included afterward. Given [4,15,100] and [10,20,30,40], return new array containing [4,10,15,20,30,40,100].
 
-from hashlib import new
-
 
 def zip(arr1, arr2):
     new_arr = []
@@ -28,9 +26,10 @@ def zip(arr1, arr2):
         new_arr.append(i)
     for i in arr2:
         new_arr.append(i)
-    for i in range(len(new_arr)):
-        if new_arr[i] > new_arr[i+1]:
-            new_arr[i+1] = new_arr[i]
+    for n in range(len(new_arr)-1):
+        for i in range(len(new_arr)-1-n):
+            if new_arr[i] > new_arr[i+1]:
+                new_arr[i], new_arr[i+1] = new_arr[i+1], new_arr[i]
     print(new_arr)
 
 zip([5,7,1],[3,10,17])
