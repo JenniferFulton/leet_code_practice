@@ -5,6 +5,7 @@
 # Do you need to return anything from your function?
 
 
+
 # 2. Skyline Heights
 # Lovely Burbank has a breathtaking view of the Los Angeles skyline. 
 # Let’s say you are given an array with heights of consecutive buildings, starting closest to you and extending away. 
@@ -17,6 +18,22 @@
 # 3. Zip It
 # Create a standalone function that accepts two arrays and combines their values sequentially into a new array. 
 # Extra values from either array should be included afterward. Given [4,15,100] and [10,20,30,40], return new array containing [4,10,15,20,30,40,100].
+
+from hashlib import new
+
+
+def zip(arr1, arr2):
+    new_arr = []
+    for i in arr1:
+        new_arr.append(i)
+    for i in arr2:
+        new_arr.append(i)
+    for i in range(len(new_arr)):
+        if new_arr[i] > new_arr[i+1]:
+            new_arr[i+1] = new_arr[i]
+    print(new_arr)
+
+zip([5,7,1],[3,10,17])
 
 
 # 4. Credit Card Validation (Bonus)
