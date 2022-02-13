@@ -14,11 +14,25 @@
 # You are situated at street level. Return array containing heights of buildings you can see, in order. 
 # Given [-1,1,1,7,3] return [1,7]. Given [0,4] return [4]. As always with challenges, do not use built-in array functions such as unshift().
 
+def skyline(array):
+    visible = []
+    for i in range(len(array)):
+        if array[i] <= 0:
+            pass
+        if array[i] == array[i+1] or array[i-1]:
+            pass
+        if array[i] < array[i-1]:
+            break
+        else:
+            visible.append(i)
+    print(visible)
+
+skyline([-1,1,1,7,3])
+
 
 # 3. Zip It
 # Create a standalone function that accepts two arrays and combines their values sequentially into a new array. 
 # Extra values from either array should be included afterward. Given [4,15,100] and [10,20,30,40], return new array containing [4,10,15,20,30,40,100].
-
 
 def zip(arr1, arr2):
     new_arr = []
@@ -33,7 +47,6 @@ def zip(arr1, arr2):
     print(new_arr)
 
 zip([5,7,1],[3,10,17])
-
 
 # 4. Credit Card Validation (Bonus)
 # The Luhn formula is sometimes used to validate credit card numbers. 
