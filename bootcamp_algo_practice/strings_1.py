@@ -44,11 +44,10 @@ print(acronym("jennifer loves the ocean"))
 def zip_array(arr1,arr2):
     dict = {}
     for key, value in zip(arr1, arr2):
-        dict['key'] = value
-        return (dict)
+        dict[key] = value
+    return (dict)
 
 print(zip_array(["abc", 3, "yo"],[42, "wassup", True]))
-
 
 # Invert Hash
 # Associative arrays are also called hashes (we’ll learn why later). Build invertHash(assocArr) to convert hash keys to values, and values to keys. 
