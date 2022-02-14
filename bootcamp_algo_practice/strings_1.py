@@ -27,7 +27,7 @@ print(get_digits("hjkh6gyg3ljl1ljklhjk0bjb543210"))
 # Given "Live from New York, it's Saturday Night!", return "LFNYISN".
 
 def acronym(string):
-    cap_string = string.capitalize()
+    cap_string = string.title()
     return (cap_string)
 
 print(acronym("jennifer loves the ocean"))
