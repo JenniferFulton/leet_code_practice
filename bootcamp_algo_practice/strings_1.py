@@ -53,5 +53,12 @@ print(zip_array(["abc", 3, "yo"],[42, "wassup", True]))
 # Associative arrays are also called hashes (we’ll learn why later). Build invertHash(assocArr) to convert hash keys to values, and values to keys. 
 # Example: given {"name": "Zaphod", "charm": "high", "morals": "dicey"}, return object {"Zaphod": "name", "high":"charm", "dicey": "morals"}.
 
+def invert(dictionary):
+    for key in dictionary.items():
+        print(key)
+    # return (dictionary)
+
+print(invert({"name": "Zaphod", "charm": "high", "morals": "dicey"}))
+
 
 
