@@ -16,15 +16,15 @@
 
 def skyline(array):
     visible = []
-    for i in range(len(array)):
+    for i in range(len(array)-1):
         if array[i] <= 0:
             pass
-        if array[i] == array[i+1] or array[i-1]:
+        if array[i] == array[i+1]or array[i] == array[i-1]:
             pass
         if array[i] < array[i-1]:
-            break
+            pass
         else:
-            visible.append(i)
+            visible.append(array[i])
     print(visible)
 
 skyline([-1,1,1,7,3])
