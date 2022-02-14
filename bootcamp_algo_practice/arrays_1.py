@@ -3,8 +3,12 @@
 # It does not, however, contain a method that will randomize the order of an array’s elements. 
 # Let’s create shuffle(arr), to efficiently shuffle a given array’s values. Work in-place, naturally. 
 # Do you need to return anything from your function?
+import random
+def shuffle(array):
+    random.shuffle(array)
+    return array
 
-
+print(shuffle([5,7,8,1,3,65]))
 
 # 2. Skyline Heights
 # Lovely Burbank has a breathtaking view of the Los Angeles skyline. 
@@ -17,14 +21,9 @@
 def skyline(array):
     visible = []
     for i in range(len(array)-1):
-        print('index',i)
-        print(array[i])
-        print(array[i-1])
         if array[i] <= 0:
             pass
-        if array[i] == array[i-1]:
-            pass
-        if array[i] < array[i-1]:
+        if array[i] <= array[i-1]:
             pass
         else:
             visible.append(array[i])
@@ -35,7 +34,8 @@ skyline([-1,1,1,7,3])
 
 # 3. Zip It
 # Create a standalone function that accepts two arrays and combines their values sequentially into a new array. 
-# Extra values from either array should be included afterward. Given [4,15,100] and [10,20,30,40], return new array containing [4,10,15,20,30,40,100].
+# Extra values from either array should be included afterward. Given [4,15,100] and [10,20,30,40], 
+# return new array containing [4,10,15,20,30,40,100].
 
 def zip(arr1, arr2):
     new_arr = []
