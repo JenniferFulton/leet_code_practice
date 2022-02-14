@@ -3,12 +3,10 @@
 # If given the string " Pl ayTha tF u nkyM usi c ", return "PlayThatFunkyMusic".
 
 def rm_blank(string):
-    for character in string:
-        print (character.isalpha())
-        if character.isalpha() == False:
-            character.replace(" ", "")
+    new_string = string.replace(" ","")
+    return(new_string)
 
-rm_blank("hell o wo r ld")
+print(rm_blank("hell o wo r ld"))
 
 # Get Digits
 # Create a Python function that given a string, returns the integer made from the string’s digits. 
