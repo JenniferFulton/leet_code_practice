@@ -28,7 +28,11 @@ print(get_digits("hjkh6gyg3ljl1ljklhjk0bjb543210"))
 
 def acronym(string):
     cap_string = string.title()
-    return (cap_string)
+    acro = ""
+    for char in cap_string:
+        if char.isupper() == True:
+            acro += char
+    return (acro)
 
 print(acronym("jennifer loves the ocean"))
 
@@ -36,6 +40,14 @@ print(acronym("jennifer loves the ocean"))
 # Associative arrays are sometimes called maps because a key (string) maps to a value. 
 # Given two arrays, create an associative array (map) containing keys of the first, and values of the second. 
 # For arr1 = ["abc", 3, "yo"] and arr2 = [42, "wassup", true], return {"abc": 42, 3: "wassup", "yo": true}.
+
+def zip_array(arr1,arr2):
+    dict = {}
+    for key, value in zip(arr1, arr2):
+        dict['key'] = value
+        return (dict)
+
+print(zip_array(["abc", 3, "yo"],[42, "wassup", True]))
 
 
 # Invert Hash
