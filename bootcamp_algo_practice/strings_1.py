@@ -12,6 +12,15 @@ print(rm_blank("hell o wo r ld"))
 # Create a Python function that given a string, returns the integer made from the string’s digits. 
 # Given "0s1a3y5w7h9a2t4?6!8?0", the function should return the number 1357924680.
 
+def get_digits(string):
+    new_string = ""
+    for character in string:
+        if character.isdigit() == True:
+            new_string += character
+    return(int(new_string))
+
+print(get_digits("hjkh6gyg3ljl1ljklhjk0bjb543210"))
+
 
 # Acronyms
 # Create a function that, given a string, returns the string’s acronym (first letters only, capitalized). 
