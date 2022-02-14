@@ -54,9 +54,10 @@ print(zip_array(["abc", 3, "yo"],[42, "wassup", True]))
 # Example: given {"name": "Zaphod", "charm": "high", "morals": "dicey"}, return object {"Zaphod": "name", "high":"charm", "dicey": "morals"}.
 
 def invert(dictionary):
-    for key in dictionary.items():
-        print(key)
-    # return (dictionary)
+    new_dict = {}
+    for key, value in dictionary.items():
+        new_dict[value] = key
+    return (new_dict)
 
 print(invert({"name": "Zaphod", "charm": "high", "morals": "dicey"}))
 
