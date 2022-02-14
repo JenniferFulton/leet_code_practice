@@ -17,9 +17,12 @@
 def skyline(array):
     visible = []
     for i in range(len(array)-1):
+        print('index',i)
+        print(array[i])
+        print(array[i-1])
         if array[i] <= 0:
             pass
-        if array[i] == array[i+1]or array[i] == array[i-1]:
+        if array[i] == array[i-1]:
             pass
         if array[i] < array[i-1]:
             pass

@@ -24,3 +24,8 @@ for y in range(1,100):
 # Based on earlier “Countdown by Fours”, given lowNum, highNum, mult, print 
 # multiples of mult from highNum down to lowNum, using a FOR. For (2,9,3), 
 # print 9 6 3 (on successive lines).
+def countdown(lowNum, highNum, mult):
+    for i in range(highNum, lowNum, (mult*-1)):
+        print(i)
+
+countdown(2,9,3)
