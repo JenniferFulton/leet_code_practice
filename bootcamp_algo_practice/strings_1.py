@@ -21,12 +21,16 @@ def get_digits(string):
 
 print(get_digits("hjkh6gyg3ljl1ljklhjk0bjb543210"))
 
-
 # Acronyms
 # Create a function that, given a string, returns the string’s acronym (first letters only, capitalized). 
 # Given " there's no free lunch - gotta pay yer way. ", return "TNFL-GPYW". 
 # Given "Live from New York, it's Saturday Night!", return "LFNYISN".
 
+def acronym(string):
+    cap_string = string.capitalize()
+    return (cap_string)
+
+print(acronym("jennifer loves the ocean"))
 
 # Zip Arrays into Map
 # Associative arrays are sometimes called maps because a key (string) maps to a value. 
