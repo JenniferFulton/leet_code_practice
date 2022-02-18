@@ -6,6 +6,10 @@ class Node():
         self.data = data
         self.next = None 
 
+class sll():
+    def __init__(self, nodeValue):
+        self.head = Node(nodeValue)
+
 # 1. FRONT
 # Write a method to return the value (not the node) at the head of the list. If the list is empty, return null.
 
