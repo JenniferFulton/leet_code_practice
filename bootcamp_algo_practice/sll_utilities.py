@@ -14,18 +14,22 @@ class sll():
         while runner != None:
             if runner.value == val:
                 print(True)
-        else:
-            print (False)
-        
-        runner = runner.next
+            runner = runner.next
         return self
 
 # Length:
 # Create a new SLL method length() that returns number of nodes in that list.
-
+    def length(self):
+        length = 0
+        runner = self.head
+        while runner != None:
+            length += 1
+            runner = runner.next
+        print(length)
+        return self
 
 # Display:
-# Create display() that returns a string containing all list values. Build what you wish console.log(myList) did!
+# Create display() that returns a string containing all list values. Build what you wish print(myList) did!
 
 
 # Move:
@@ -38,4 +42,4 @@ class sll():
 
 
 new_list = sll(7)
-new_list.find_val(7)
+new_list.find_val(7).length()
