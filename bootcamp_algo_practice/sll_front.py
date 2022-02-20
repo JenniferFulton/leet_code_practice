@@ -1,9 +1,6 @@
-from dataclasses import dataclass
-
-
 class Node():
-    def __init__(self, data):
-        self.data = data
+    def __init__(self, value):
+        self.value = value
         self.next = None 
 
 class sll():
@@ -13,7 +10,10 @@ class sll():
 # 1. FRONT
 # Write a method to return the value (not the node) at the head of the list. If the list is empty, return null.
     def display_head(self):
-        print(self.head.data)
+        if self.head == None:
+            print (None)
+        else:
+            print(self.head.value)
         return self
         
 # 2. REMOVE FRONT
@@ -30,12 +30,12 @@ class sll():
 # 3. ADD FRONT
 # Write a method that accepts a value and create a new node, assign it to the list head, and return a pointer to the new head node.
     def add_front(self, val):
-        self.next = self.head
-        self.head = val
+        new_node = sll(val)
+        new_node.head.next = self.head
         print(self.head)
         return self
 
 
 
 new_list = sll(7)
-new_list.add_front(5).display_head()
+new_list.display_head().remove_head()
