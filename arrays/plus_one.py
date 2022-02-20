@@ -16,7 +16,7 @@
 # Thus, the result should be [1,0].
 
 def add_one(digits):
-    if digits[len(digits)] == 9:
+    if digits[len(digits)-1] == 9:
         digits[len(digits)-1] += 1
         digits.append(0)
     else:
