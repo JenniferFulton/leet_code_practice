@@ -1,3 +1,12 @@
+class Node():
+    def __init__(self, value):
+        self.value = value
+        self.next = None 
+
+class sll():
+    def __init__(self, nodeValue):
+        self.head = Node(nodeValue)
+        
 # SLL Utilities:
 # Add a method contains(value) to your SLL class, which is given a value as a parameter.  Return a boolean (true/false); true, if the list possesses a node that contains the provided value.
 
