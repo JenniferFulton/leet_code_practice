@@ -30,6 +30,11 @@ class sll():
 
 # Display:
 # Create display() that returns a string containing all list values. Build what you wish print(myList) did!
+    def display(self):
+        runner = self.head
+        while runner != None:
+            print(runner.value)
+            runner = runner.next
 
 
 # Move:
@@ -42,4 +47,4 @@ class sll():
 
 
 new_list = sll(7)
-new_list.find_val(7).length()
+new_list.find_val(7).length().display()
