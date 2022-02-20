@@ -15,3 +15,14 @@
 # Incrementing by one gives 9 + 1 = 10.
 # Thus, the result should be [1,0].
 
+def add_one(digits):
+    if digits[len(digits)] == 9:
+        digits[len(digits)-1] += 1
+        digits.append(0)
+    else:
+        digits[len(digits)-1] += 1
+    
+    return(digits)
+
+print(add_one([9]))
+print(add_one([1,2,3]))
