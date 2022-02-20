@@ -32,10 +32,9 @@ class sll():
     def add_front(self, val):
         new_node = sll(val)
         new_node.head.next = self.head
-        print(self.head)
+        self.head = new_node
+        print(new_node.head.value)
         return self
 
-
-
 new_list = sll(7)
-new_list.display_head().remove_head()
+new_list.display_head().remove_head().add_front(6)
