@@ -1,9 +1,9 @@
-class Node():
+class Node:
     def __init__(self, value):
         self.value = value
         self.next = None 
 
-class sll():
+class sll:
     def __init__(self, nodeValue):
         self.head = Node(nodeValue)
         
@@ -37,4 +37,5 @@ class sll():
         return self
 
 new_list = sll(7)
-new_list.display_head().remove_head().add_front(6)
+new_list.head.next = Node(6)
+new_list.display_head().remove_head().display_head().add_front(5).display_head()
