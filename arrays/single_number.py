@@ -7,12 +7,9 @@
 
 
 def single_num(nums):
-    single = nums[0]
     for i in nums:
-        if nums[i] == single:
-            pass
-        else:
-            nums[i]=single
-    return (single)
+        if nums.count(i) == 1:
+            return i
 
-print(single_num([2,2,1]))
+# print(single_num([2,2,1]))
+print(single_num([4,1,2,1,2]))
