@@ -12,11 +12,12 @@
 def contains_duplicate(nums):
     
     for i in nums:
-        print(nums.count(i))
-        if nums.count(nums[i]) >= 2:
+        print(f"this is {i}")
+        print(f"this count of {i} is {nums.count(i)}")
+        if nums.count(i) >= 2:
             return True
-        else:
-            return False
+        
+        return False
 
-print(contains_duplicate([1,2,3,1]))
-print(contains_duplicate([2,4,4,6]))
+print(contains_duplicate([2,14,18,22,22]))
+# print(contains_duplicate([2,4,4,6]))
