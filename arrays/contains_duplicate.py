@@ -10,13 +10,20 @@
 # Output: false
 
 def contains_duplicate(nums):
+    have_seen = {}
     for i in nums:
-        if nums.count(i) >= 2:
+        # check if i is in dictionay
+        if have_seen.get(i) == None:
+            #if not add it to the dictionary and keep going
+            have_seen[i] = True
+            #if it is already in the dictionary return True
+        else:
             return True
-    else:
-        return False
+    return False
 
 
 print(contains_duplicate([2,14,18,22,22]))
 print(contains_duplicate([2,4,4,6]))
 print(contains_duplicate([1,2,3,4]))
+
+
