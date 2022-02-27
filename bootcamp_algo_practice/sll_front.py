@@ -24,18 +24,18 @@ class sll:
         else:
             removed = self.head
             self.head = removed.next
-            print(self.head)
+            print(self.head.value)
         return self
 
 # 3. ADD FRONT
 # Write a method that accepts a value and create a new node, assign it to the list head, and return a pointer to the new head node.
     def add_front(self, val):
-        new_node = sll(val)
-        new_node.head.next = self.head
+        new_node = Node(val)
+        new_node.next = self.head
         self.head = new_node
-        print(new_node.head.value)
+        print(new_node.value)
         return self
 
 new_list = sll(7)
 new_list.head.next = Node(6)
-new_list.display_head().remove_head().display_head().add_front(5).display_head()
+new_list.display_head().remove_head().add_front(8)
