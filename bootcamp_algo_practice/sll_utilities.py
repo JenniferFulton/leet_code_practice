@@ -9,7 +9,7 @@ class sll:
     
     def add_back(self, value):
         runner = self.head
-        while runner != None:
+        while runner.next != None:
             runner = runner.next
         runner.next = Node(value)
         return self
@@ -22,6 +22,7 @@ class sll:
             if runner.value == val:
                 print(True)
             runner = runner.next
+        #Would like it to print ('Value is not in the list') if True is not returned
         return self
 
 # Length:
@@ -32,7 +33,7 @@ class sll:
         while runner != None:
             length += 1
             runner = runner.next
-        print('length is:', length)
+        print(f'This list has {length} nodes')
         return self
 
 # Display:
@@ -72,6 +73,4 @@ class sll:
             return(self)
 
 new_list = sll(7)
-new_list.head.next = Node(6)
-new_list.head.next.next = Node(3)
-new_list.find_val(6).length().display().min_toFront().display()
+new_list.add_back(5).add_back(17).display().find_val(5).length()
