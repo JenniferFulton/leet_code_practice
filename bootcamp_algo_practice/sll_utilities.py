@@ -20,7 +20,7 @@ class sll:
         runner = self.head
         while runner != None:
             if runner.value == val:
-                print(True)
+                return True
             runner = runner.next
         #Would like it to print ('Value is not in the list') if True is not returned
         return self
@@ -56,7 +56,7 @@ class sll:
             if runner < minimum:
                 minimum = runner
             runner = runner.next
-        self.head = min
+        self.head = minimum
         return(self)
 
 # SList: Move Max to Back
@@ -72,5 +72,7 @@ class sll:
             runner.next = max
             return(self)
 
-new_list = sll(7)
-new_list.add_back(5).add_back(17).display().find_val(5).length()
+# new_list = sll(7)
+# new_list.add_back(5).add_back(17).display().find_val(5).length()
+moving_list = sll(17)
+moving_list.add_back(6).add_back(20).add_back(14).add_back(199).min_toFront().display()
