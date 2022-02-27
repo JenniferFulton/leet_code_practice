@@ -50,10 +50,10 @@ class sll:
 # Create a standalone function that locates the minimum value in a linked list, and moves that node to the front of the list. 
 # Return the new list, with all nodes still present, and all (except for the new head node) in their original order.
     def min_toFront(self):
-        minimum = self.head
         runner = self.head
+        minimum = self.head.value
         while runner != None:
-            if runner < minimum:
+            if runner.value < minimum:
                 minimum = runner
             runner = runner.next
         self.head = minimum
@@ -63,14 +63,14 @@ class sll:
 # Create a standalone function that locates the maximum value in a linked list, and moves that node to the back of the list. 
 # Return the new list, with all nodes still present, and all in their original order except for the node you moved to the end of the singly linked list.
     def mxn_toBack(self):
-            max = self.head
-            runner = self.head
-            while runner != None:
-                if runner > max:
-                    max = runner
-                runner = runner.next
-            runner.next = max
-            return(self)
+        runner = self.head
+        max = self.head.value
+        while runner != None:
+            if runner.value > max:
+                max = runner
+            runner = runner.next
+        runner.next = max
+        return(self)
 
 # new_list = sll(7)
 # new_list.add_back(5).add_back(17).display().find_val(5).length()
