@@ -34,7 +34,22 @@ class B_Tree:
 # Create a contains(val) method on BST that returns whether the tree contains a given value. 
 # Take advantage of the BST structure to make this a much more rapid operation than SList.contains() would be.
 
-
+    def contains(self, valueInput):
+        runner = self.root
+        while runner:
+            if valueInput == runner.value:
+                return True
+            else:
+                if valueInput < runner.value:
+                    if runner.left == None:
+                        return False
+                    else:
+                        runner = runner.left
+                else:
+                    if runner.right == None:
+                        return False
+                    else:
+                        runner = runner.right
 
 # BST: Min
 # Create a min() method on the BST class that returns the smallest value found in the BST.
@@ -55,8 +70,8 @@ class B_Tree:
 # Create an isEmpty() method to return whether the BST is empty (whether it contains no values).
 
 my_tree = B_Tree(6)
-my_tree.add_node(4)
-print(my_tree.root.left.value)
+print(my_tree.add_node(4).add_node(10).add_node(30).add_node(1).contains(4))
+
 
 
 
