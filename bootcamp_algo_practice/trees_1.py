@@ -50,16 +50,32 @@ class B_Tree:
                         return False
                     else:
                         runner = runner.right
+        return self
 
 # BST: Min
 # Create a min() method on the BST class that returns the smallest value found in the BST.
 
-
+    def min_value(self):
+        runner = self.root
+        while runner:
+            if runner.left == None:
+                return runner.value
+            else:
+                runner = runner.left
+        return self
 
 # BST: Max
 # Create a max() BST method that returns the largest value contained in the binary search tree.
 
-
+    def max_value(self):
+        runner = self.root
+        while runner:
+            if runner.right == None:
+                return runner.value
+                
+            else:
+                runner = runner.right
+        return self
 
 # BONUS: BST: Size 
 # Write a size() method that returns the number of nodes (values) contained in the tree.
@@ -71,6 +87,7 @@ class B_Tree:
 
 my_tree = B_Tree(6)
 print(my_tree.add_node(4).add_node(10).add_node(30).add_node(1).contains(4))
+print(my_tree.max_value())
 
 
 
