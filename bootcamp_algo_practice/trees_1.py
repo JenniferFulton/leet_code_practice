@@ -1,20 +1,34 @@
-class BTNode:
-    def __init__(self, value):
-        self.val = value
+class Node:
+    def __init__(self, valueInput):
+        self.value = valueInput
         self.left = None
         self.right = None
 
-class BST:
-    def __init__(self):
-        self.root = None
-
-# add methods here...
+class B_Tree:
+    def __init__(self, valueInput):
+        self.root = Node(valueInput)
 
 # BST: Add
 # Create an add(val) method on the BST object to add new value to the tree. 
-# This entails creating a BTNode with this value and connecting it at the appropriate place in the tree. Unless specified otherwise, BSTs can contain duplicate values.
+# This entails creating a BTNode with this value and connecting it at the appropriate place in the tree. 
+# Unless specified otherwise, BSTs can contain duplicate values.
 
-
+    def add_node(self, valueInput):
+        new_node = Node(valueInput)
+        runner = self.root
+        while runner:
+            if new_node.value < runner.value:
+                if runner.left == None:
+                    runner.left = new_node
+                    return self
+                else:
+                    runner = runner.left
+            else:
+                if runner.right == None:
+                    runner.right = new_node
+                    return self
+                else:
+                    runner = runner.right
 
 # BST: Contains
 # Create a contains(val) method on BST that returns whether the tree contains a given value. 
@@ -39,4 +53,10 @@ class BST:
 
 # BONUS: BST: Is Empty
 # Create an isEmpty() method to return whether the BST is empty (whether it contains no values).
+
+my_tree = B_Tree(6)
+my_tree.add_node(4)
+print(my_tree.root.left.value)
+
+
 
