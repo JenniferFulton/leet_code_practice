@@ -79,15 +79,31 @@ class B_Tree:
 
 # BONUS: BST: Size 
 # Write a size() method that returns the number of nodes (values) contained in the tree.
-
-
+    
+    def size(self):
+        if self.root == None:
+            return 0
+        leftSide = B_Tree(self.root.left)
+        rightSide = B_Tree(self.root.right)
+        return 1 + leftSide.size() + rightSide.size()
+        
 
 # BONUS: BST: Is Empty
 # Create an isEmpty() method to return whether the BST is empty (whether it contains no values).
+    
+    def emptyTree(self):
+        if self.root == None:
+            print('Tree is Empty')
+            return False
+        else:
+            print('This tree has nodes')
+            return True
+        
+        
 
 my_tree = B_Tree(6)
 print(my_tree.add_node(4).add_node(10).add_node(30).add_node(1).contains(4))
-print(my_tree.max_value())
+print(my_tree.emptyTree)
 
 
 
