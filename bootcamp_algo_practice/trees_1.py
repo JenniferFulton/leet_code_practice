@@ -103,7 +103,7 @@ class B_Tree:
 
 my_tree = B_Tree(6)
 print(my_tree.add_node(4).add_node(10).add_node(30).add_node(1).contains(4))
-print(my_tree.emptyTree)
+print(my_tree.emptyTree())
 
 
 
