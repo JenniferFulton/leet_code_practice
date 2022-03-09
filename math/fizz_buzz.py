@@ -5,3 +5,21 @@
 # answer[i] == "Buzz" if i is divisible by 5.
 # answer[i] == i (as a string) if none of the above conditions are true.
 
+def fizz_buzz(n):
+    array = []
+    for i in range(1,n+1,1):
+        if i % 3 == 0:
+            array.append("Fizz")
+        
+        elif i % 5 == 0:
+            array.append("Buzz")
+        
+        elif  i % 3 == 0 and i % 5 == 0:
+            array.append("FizzBuzz")
+        
+        else:
+            array.append(str(i))
+        
+    return array
+
+print(fizz_buzz(15))
