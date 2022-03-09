@@ -9,3 +9,22 @@
 # Incrementing by one gives 123 + 1 = 124.
 # Thus, the result should be [1,2,4].
 
+def plus_one(digits):
+    digit_string = ""
+    array = []
+
+    for i in digits:
+        digit_string = digit_string + str(i)
+
+    integer = int(digit_string) + 1
+
+    for i in str(integer):
+        array.append(i)
+    
+    return array
+
+print(plus_one([1,2,4]))
+print(plus_one([9]))
+
+#O(n)^2 because it has to iterate twice
+# or is it o(n) since it iterates 2 different objects once
