@@ -20,3 +20,5 @@ def fizz_buzz(n):
     return array
 
 print(fizz_buzz(15))
+
+#O(n) because it is only going through the range one time. It compares i to each if/elif/else statement during the iteration
