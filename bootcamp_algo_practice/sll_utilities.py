@@ -6,6 +6,27 @@ class Node:
 class sll:
     def __init__(self, nodeValue):
         self.head = Node(nodeValue)
+
+    def __iter__(self):
+        self.it_position = self.head
+        return self
+
+    def __next__(self):
+        if self.it_position is None:
+            raise StopIteration
+
+        value = self.it_position.value
+        self.it_position = self.it_position.next
+        return value
+
+    def __getitem__(self, index):
+        i = 0
+        node = self.head
+        while (i < index and node is not None):
+            i += 1
+            node = node.next
+
+        return node.value
     
     def add_back(self, value):
         runner = self.head
@@ -75,4 +96,11 @@ class sll:
 # new_list = sll(7)
 # new_list.add_back(5).add_back(17).display().find_val(5).length()
 moving_list = sll(17)
-moving_list.add_back(6).add_back(20).add_back(14).add_back(199).min_toFront().display()
+moving_list.add_back(6).add_back(20).add_back(14).add_back(199)#.display()
+
+for i in moving_list:
+    print(i)
+
+
+
+print(f"index: {moving_list[3]}")

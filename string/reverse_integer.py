@@ -10,8 +10,28 @@
 
 
 def reverse_int(x):
-    num = str(x)
-    return(int(num[::-1]))
-    
+    # num = str(x)
+    # return(int(num[::-1]))
 
-print(reverse_int(6509))
+    if x < 0:
+        neg_num = str(x * -1)
+        length = len(neg_num)
+        middle = round(length/2)
+        for i in range(middle):
+            neg_num.replace(neg_num[i],neg_num[length-1-i]) 
+            neg_num.replace(neg_num[length-1-i],num[i])
+        return(int(neg_num * -1))
+    else:
+        num = str(x)
+        length = len(num)
+        middle = round(length/2)
+        for i in range(middle):
+            temp = num[i]
+            num = num.replace(num[i],num[length-1-i]) 
+            num = num.replace(num[length-1-i],temp)
+        return(int(num))
+    
+print(reverse_int(1234))
+
+string = "Jennifer"
+print(string.replace("f","B",1))
