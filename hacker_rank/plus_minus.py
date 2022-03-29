@@ -49,3 +49,6 @@ if __name__ == '__main__':
     arr = list(map(int, input().rstrip().split()))
 
     plusMinus(arr)
+
+# This would be an O(n) solution because we have to look at each value in arr. Making 3 new values is costly
+# when thinking about space complexity but it won't get better than O(n) run time. 
