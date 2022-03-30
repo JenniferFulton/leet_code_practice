@@ -8,8 +8,8 @@ def selection_sort(arr):
         for j in range(min_index + 1, len(arr)):
             if arr[j] < arr[min_index]:
                 min_index = j
-    if i != min_index:
-        arr[i], arr[min_index] = arr[min_index], arr[i]
+        if i != min_index:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
     
     return(arr)
 
