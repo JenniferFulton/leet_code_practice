@@ -20,7 +20,7 @@ def remove_duplicate(nums):
     i = 0
     while i <= len(nums)-2:
         if nums[i] == nums[i+1]:
-            nums.pop(nums[i])
+            nums.pop(i+1)
         else:
             i += 1
     return (nums)
