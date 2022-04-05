@@ -10,13 +10,21 @@
 # Output: false
 
 def contains_duplicate(nums):
-    have_seen = {}
+    # have_seen = {}
+    # for i in nums:
+    #     # check if i is in dictionay
+    #     if have_seen.get(i) == None:
+    #         #if not add it to the dictionary and keep going
+    #         have_seen[i] = True
+    #         #if it is already in the dictionary return True
+    #     else:
+    #         return True
+    # return False
+    
+    have_seen = set()
     for i in nums:
-        # check if i is in dictionay
-        if have_seen.get(i) == None:
-            #if not add it to the dictionary and keep going
-            have_seen[i] = True
-            #if it is already in the dictionary return True
+        if have_seen.__contains__(i) == False:
+            have_seen.add(i)
         else:
             return True
     return False
