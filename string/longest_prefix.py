@@ -27,19 +27,18 @@ def longestCommonPrefix(strs):
     i = 0
     while i <= len(arr)-1:
         for j in range(len(strs)-1):
-            # print("arr[i]:", arr[i])
-            # print("strs[j][j]:",strs[j][j])
-            # print("strs[j+1][j]",strs[j+1][j])
-            if arr[i] == strs[j][j] and arr[i] == strs[j+1][j]:
+            if arr[i] != strs[j][i] and arr[i] != strs[j+1][j]:
+                return(common_prefix)
+            else:
                 common_prefix = common_prefix + arr[i]
-        if common_prefix == "":
-            break
-        i += 1
+        # if common_prefix == "":
+        #     return common_prefix
+            i += 1
 
                     
     return common_prefix
 
-# print(longestCommonPrefix(["flower","flow","flight"]))
-# print(longestCommonPrefix(["ab", "a"]))
-# print(longestCommonPrefix(["reflower","flow","flight"]))
+print(longestCommonPrefix(["flower","flow","flight"]))
+print(longestCommonPrefix(["ab", "a"]))
+print(longestCommonPrefix(["reflower","flow","flight"]))
 print(longestCommonPrefix(["flower","flower","flower","flower"]))
