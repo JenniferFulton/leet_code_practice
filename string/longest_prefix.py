@@ -25,14 +25,20 @@ def longestCommonPrefix(strs):
     
     # comparing values in the array to characters within the strings
     i = 0
+    # while loop with go the length of arr to account for every character
     while i <= len(arr)-1:
+        #for loop will account for every word
         for j in range(len(strs)-1):
-            if arr[i] != strs[j][i] and arr[i] != strs[j+1][j]:
-                return(common_prefix)
-            else:
+            # if the character in the arr doesn't equal the character in the string(strs[i])
+            # and the string after it return common prefix
+            current_char = arr[i]
+            current_string = strs[j]
+            if arr[i] == strs[j][i]:
                 common_prefix = common_prefix + arr[i]
-        # if common_prefix == "":
-        #     return common_prefix
+            else:
+                # if they are all equal, add it to the common prefix
+                return(common_prefix)
+                
             i += 1
 
                     
