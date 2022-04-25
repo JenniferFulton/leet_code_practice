@@ -10,3 +10,17 @@
 # 6 contains 1 digit (odd number of digits). 
 # 7896 contains 4 digits (even number of digits). 
 # Therefore only 12 and 7896 contain an even number of digits.
+
+from typing_extensions import runtime
+
+
+def findNumbers(nums):
+    evens = 0
+    for i in nums:
+        if len(str(i)) % 2 == 0:
+            evens += 1
+    return evens
+
+# O(N) time complexity?
+#     does changing it to a string make it longer?
+# O(1) space complexity?
