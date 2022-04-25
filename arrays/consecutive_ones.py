@@ -21,3 +21,4 @@ def findMaxConsecutiveOnes(nums):
 print(findMaxConsecutiveOnes([1,1,0,1,1,1]))
 
 # O(N) time complexity
+# O(1) space complexity??? How are we not using more space when we create variables
