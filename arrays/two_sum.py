@@ -4,7 +4,7 @@
 
 # You can return the answer in any order.
 
-def twoSum(nums):
+def twoSum(nums, target):
     array = []
     for i in range(len(nums)):
         for j in range(i):

@@ -1,17 +1,13 @@
-def remove_dup(nums):
-    temp = ""
-    for i in nums:
-        print("temp is:", temp)
-        print("i is:", i)
-        if i == temp:
-            temp = i
-            nums.pop(i)
-        else:
-            temp = i
+def pangrams(s):
+    alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
-    return nums
+    for i in s:
+        alpha.append(i)
+    
+    for j in alpha:
+        if alpha.count(j) == 1:
+            return("not pangram")
+    
+    return("pangram")
 
-print(remove_dup([0,0,1,1,1,2,2,3,3,4]))
-
-
-
+print(pangrams())

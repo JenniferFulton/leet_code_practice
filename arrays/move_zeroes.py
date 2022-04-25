@@ -6,7 +6,7 @@
 # Output: [1,3,12,0,0]
 
 class Solution:
-    def moveZeroes(self, nums: List[int]) -> None:
+    def moveZeroes(nums):
         for int in range(0,len(nums)):
             if nums[int] == 0:
                 nums.append(nums[int])
