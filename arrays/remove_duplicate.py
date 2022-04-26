@@ -28,16 +28,18 @@ def remove_duplicate(nums):
 # print(remove_duplicate([-1,0,0,0,0,3,3]))
 
 # solve without pop
-    i = 0
-    k = len(nums)
-    while i < k:
-        if nums[i] == nums[i+1]:
-            for j in range(i+1, len(nums),1):
-                nums[j-1] = nums[j]
-            k -= 1
-            i = 0
-        else:
-            i += 1
-    return nums, k
+    if len(nums) == 1:
+        return 1
+    else:
+        i = 0
+        k = len(nums)-1
+        while i < k:
+            if nums[i] == nums[i+1]:
+                for j in range(i+1, len(nums),1):
+                    nums[j-1] = nums[j]
+                k -= 1
+            else:
+                i += 1
+        return k+1
 
 print(remove_duplicate([1,1,2,3,3,4,5,5,5]))
