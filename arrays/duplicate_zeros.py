@@ -19,4 +19,8 @@ def duplicateZeros(arr):
     return arr
 
 print(duplicateZeros([1,0,2,3,0,4,5,0]))
+
+# space complexity O(1)
+# time complexity O(n^2)?
+#     worst case scenario, it's mostly zeros and goes over the list and shifts ALOT
     
