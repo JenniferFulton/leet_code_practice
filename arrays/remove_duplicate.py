@@ -17,14 +17,27 @@
 # It does not matter what you leave beyond the returned k (hence they are underscores).
 
 def remove_duplicate(nums):
+#     i = 0
+#     while i <= len(nums)-2:
+#         if nums[i] == nums[i+1]:
+#             nums.pop(i+1)
+#         else:
+#             i += 1
+#     return (nums)
+
+# print(remove_duplicate([-1,0,0,0,0,3,3]))
+
+# solve without pop
     i = 0
-    while i <= len(nums)-2:
+    k = len(nums)
+    while i < k:
         if nums[i] == nums[i+1]:
-            nums.pop(i+1)
+            for j in range(i+1, len(nums),1):
+                nums[j-1] = nums[j]
+            k -= 1
+            i = 0
         else:
             i += 1
-    return (nums)
+    return nums, k
 
-print(remove_duplicate([-1,0,0,0,0,3,3]))
-
-# solve making new array
+print(remove_duplicate([1,1,2,3,3,4,5,5,5]))
