@@ -9,3 +9,18 @@
 # Input: arr = [10,2,5,3]
 # Output: true
 # Explanation: N = 10 is the double of M = 5,that is, 10 = 2 * 5.
+
+def checkIfExist(arr):
+    i = 0
+    while i < len(arr):
+        n = arr[i]
+        for j in range(len(arr)):
+            m = arr[j]
+            if n == 0 and m == 0:
+                return True
+            if n != m and n == m * 2:
+                return True
+        i += 1
+    return False
+
+print(checkIfExist([-2,0,10,-19,4,6,-8]))
