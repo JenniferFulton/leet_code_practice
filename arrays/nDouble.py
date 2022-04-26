@@ -12,15 +12,17 @@
 
 def checkIfExist(arr):
     i = 0
-    while i < len(arr):
-        n = arr[i]
-        for j in range(len(arr)):
-            m = arr[j]
-            if n == 0 and m == 0:
-                return True
-            if n != m and n == m * 2:
-                return True
-        i += 1
+    if arr.count(0) > 1:
+        return True
+    else:
+        while i < len(arr):
+            n = arr[i]
+            for j in range(len(arr)):
+                m = arr[j]
+                if n != m and n == m * 2:
+                    return True
+            i += 1
     return False
 
 print(checkIfExist([-2,0,10,-19,4,6,-8]))
+
