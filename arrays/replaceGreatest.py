@@ -14,12 +14,18 @@
 
 def replaceElements(arr):
     i = 0 
-    while i < len(arr):
-        for j in range(i+1,len(arr)-1,1):
-            if arr[j] > arr[i]:
-                arr[i] = arr[j]
+    while i < len(arr)-1:
+        greatest = arr[i+1]
+        for j in range(i+1,len(arr),1):
+            if arr[j] > greatest:
+                greatest = arr[j]
+            arr[i] = greatest
         i+=1
-    
+
+    arr[len(arr)-2] = arr[len(arr)-1]
     arr[len(arr)-1] = -1
-    
+
     return arr
+        
+
+print(replaceElements([57010,40840,69871,14425,70605]))
