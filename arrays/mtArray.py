@@ -19,11 +19,36 @@ def validMountainArray(arr):
     if len(arr) < 3:
         return False
 
+    # find the peak
     peak = arr[0]
     for i in arr:
         if i > peak:
             peak = i
     print("peak is:", peak)
+
+    # make sure peak is not on the end of the mt
+    if peak == arr[0] or peak == arr[len(arr)-1]:
+        return False
+    
+    # Need to find the index of the peak
+    peak_index = 0
+    for i in range(len(arr)):
+        if arr[i] == peak:
+            peak_index = i
+    print("peak index:", peak_index)
+
+    # up the mt
+    for i in range(peak_index):
+        print("up:",arr[i])
+        if arr[i] >= arr[i+1]:
+            return False
+    # down the mt
+    for i in range(peak_index, len(arr)-1, 1):
+        print("down:",arr[i])
+        if arr[i] <= arr[i+1]:
+            return False
+
+    return True
         
 
 print(validMountainArray([0,1,2,4,2,1]))
