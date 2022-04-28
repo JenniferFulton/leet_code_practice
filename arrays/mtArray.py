@@ -18,16 +18,30 @@
 def validMountainArray(arr):
     if len(arr) < 3:
         return False
-    middle =  len(arr)//2
     
-    for i in range(middle):
-        if arr[i] >= arr[i+1]:
-            return False
-        
-    for i in range(middle,len(arr)-1,1):
+    if len(arr) % 2 == 0:
+        middle = (len(arr)//2)-1
+    else:
+        middle =  len(arr)//2
+    
+    i = 0
+    # going up the mt
+    while i < middle:
         if arr[i] <= arr[i+1]:
+            i += 1
+        else:
             return False
     
-    return True
+    # for i in range(middle):
+    #     if arr[i] >= arr[i+1]:
+    #         return False
+        
+    # for i in range(middle+1,len(arr)-1,1):
+    #     if arr[i] <= arr[i+1]:
+    #         return False
+    
+    # return True
 
-print(validMountainArray([3,5,5]))
+    
+
+print(validMountainArray([0,1,2,4,2,1]))
