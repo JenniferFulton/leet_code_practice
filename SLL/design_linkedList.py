@@ -6,6 +6,16 @@ class Node:
 class MyLinkedList:
     def __init__(self):
         self.head = None
+    
+    def view(self):
+        #if the list is empty make the input value the head of the list
+        if self.head == None:
+            return None
+        else:
+            runner = self.head
+            while runner != None:
+                print(runner.value)
+                runner = runner.next
 
     def get(self, index: int) -> int:
         #if index given is a negative number
@@ -47,8 +57,9 @@ class MyLinkedList:
         else:    
             runner = self.head
             while runner != None:
+                print(runner.value)
                 runner = runner.next
-            runner.next =  Node(val)
+            # runner.next =  Node(val)
 
     def addAtIndex(self, index: int, val: int) -> None:
         current_index = 0
@@ -70,9 +81,13 @@ class MyLinkedList:
 
 
 # Your MyLinkedList object will be instantiated and called as such:
-# obj = MyLinkedList()
-# param_1 = obj.get(index)
-# obj.addAtHead(val)
-# obj.addAtTail(val)
-# obj.addAtIndex(index,val)
-# obj.deleteAtIndex(index)
+myLinkedList = MyLinkedList()
+myLinkedList.addAtHead(7)
+myLinkedList.addAtHead(5)
+myLinkedList.addAtHead(3)
+myLinkedList.addAtHead(1)
+myLinkedList.view()
+# print(myLinkedList.addAtIndex(1, 2))    
+# print(myLinkedList.get(1))           
+# print(myLinkedList.deleteAtIndex(1))    
+# print(myLinkedList.get(1))              
