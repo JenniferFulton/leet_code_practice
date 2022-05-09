@@ -80,8 +80,11 @@ class MyLinkedList:
             runner = runner.next
         
         # if index equals the length of the list append to the end of the list
-        # if index == current_index + 1:
-        #     runner.next = Node(val)
+        if index == current_index:
+            runner = self.head
+            while runner.next != None:
+                runner = runner.next
+            runner.next = Node(val) 
 
     def deleteAtIndex(self, index: int) -> None:
         current_index = 0
@@ -109,5 +112,7 @@ myLinkedList.addAtHead(1)
 # myLinkedList.deleteAtIndex(5)
 # myLinkedList.view()
 # myLinkedList.addAtTail(9)
-myLinkedList.addAtIndex(1, 2) 
+# myLinkedList.addAtIndex(1, 2)
+myLinkedList.addAtIndex(4,0) 
+myLinkedList.addAtIndex(5,12) 
 myLinkedList.view()   
