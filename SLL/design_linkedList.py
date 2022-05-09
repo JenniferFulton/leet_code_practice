@@ -66,15 +66,14 @@ class MyLinkedList:
         runner = self.head
         while runner != None:
             if current_index == index:
-                temp = runner
-                runner = Node(val)
-                runner.next = temp
+                previous_node.next = Node(val)
             current_index += 1
+            previous_node = runner
             runner = runner.next
         
         # if index equals the length of the list append to the end of the list
-        if index == current_index + 1:
-            runner.next = Node(val)
+        # if index == current_index + 1:
+        #     runner.next = Node(val)
 
     def deleteAtIndex(self, index: int) -> None:
         pass
@@ -86,11 +85,12 @@ myLinkedList.addAtHead(7)
 myLinkedList.addAtHead(5)
 myLinkedList.addAtHead(3)
 myLinkedList.addAtHead(1)
-myLinkedList.view()
-# print(myLinkedList.addAtIndex(1, 2))    
-print(myLinkedList.get(1))
-print(myLinkedList.get(3))
-print(myLinkedList.get(5))
-print(myLinkedList.get(-2))           
+myLinkedList.view()   
+# print(myLinkedList.get(1))
+# print(myLinkedList.get(3))
+# print(myLinkedList.get(5))
+# print(myLinkedList.get(-2))  
+myLinkedList.addAtIndex(1, 2)  
+myLinkedList.view()        
 # print(myLinkedList.deleteAtIndex(1))    
 # print(myLinkedList.get(1))              
