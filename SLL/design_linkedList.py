@@ -38,9 +38,10 @@ class MyLinkedList:
                 return runner.value
             current_index += 1
             runner = runner.next
+        print(current_index)
         
         #make sure indec is not out of range
-        if index > current_index:
+        if index >= current_index:
             return -1
         
 
@@ -95,32 +96,37 @@ class MyLinkedList:
                 runner.next = Node(val) 
 
     def deleteAtIndex(self, index: int) -> None:
-        current_index = 0
-        runner = self.head
-        while runner != None:
-            if current_index == index:
-                previous_node.next = runner.next
-            current_index += 1
-            previous_node = runner
-            runner = runner.next
+        #if index is zero, create a new head with next node
+        if index == 0:
+            self.head = self.head.next
+            
+        else:
+            current_index = 0
+            runner = self.head
+            while runner != None:
+                if current_index == index:
+                    previous_node.next = runner.next
+                current_index += 1
+                previous_node = runner
+                runner = runner.next
 
 
 # Your MyLinkedList object will be instantiated and called as such:
 myLinkedList = MyLinkedList()
-myLinkedList.addAtHead(7)
-myLinkedList.addAtHead(5)
-myLinkedList.addAtHead(3)
-myLinkedList.addAtHead(1)
+myLinkedList.addAtHead(4)
+# myLinkedList.addAtHead(5)
+# myLinkedList.addAtHead(3)
+# myLinkedList.addAtHead(1)
 # myLinkedList.view()   
-# print(myLinkedList.get(1))
+print(myLinkedList.get(1))
 # print(myLinkedList.get(3))
 # print(myLinkedList.get(5))
 # print(myLinkedList.get(-2))          
-# myLinkedList.deleteAtIndex(3)
+# myLinkedList.deleteAtIndex(0)
 # myLinkedList.deleteAtIndex(5)
 # myLinkedList.view()
 # myLinkedList.addAtTail(9)
 # myLinkedList.addAtIndex(1, 2)
-myLinkedList.addAtIndex(0,20) 
-myLinkedList.addAtIndex(5,12) 
+# myLinkedList.addAtIndex(0,20) 
+# myLinkedList.addAtIndex(5,12) 
 myLinkedList.view()   
