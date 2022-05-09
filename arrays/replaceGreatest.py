@@ -13,19 +13,13 @@
 # - index 5 --> there are no elements to the right of index 5, so we put -1.
 
 def replaceElements(arr):
-    i = 0 
-    while i < len(arr)-1:
-        greatest = arr[i+1]
-        for j in range(i+1,len(arr),1):
-            if arr[j] > greatest:
-                greatest = arr[j]
+    last_index = len(arr)-1
+    greatest = arr[last_index]
+    
+    for i in range(last_index,-1,-1):
+        if arr[i-1] > greatest:
+            greatest = arr[i-1]
             arr[i] = greatest
-        i+=1
+    print(arr)
 
-    arr[len(arr)-2] = arr[len(arr)-1]
-    arr[len(arr)-1] = -1
-
-    return arr
-        
-
-print(replaceElements([57010,40840,69871,14425,70605]))
+replaceElements([15,18,4,5,6,1,])
