@@ -56,10 +56,9 @@ class MyLinkedList:
         #add the value to the end of the list
         else:    
             runner = self.head
-            while runner != None:
-                print(runner.value)
+            while runner.next != None:
                 runner = runner.next
-            # runner.next =  Node(val)
+            runner.next = Node(val)
 
     def addAtIndex(self, index: int, val: int) -> None:
         current_index = 0
@@ -98,7 +97,8 @@ myLinkedList.view()
 # print(myLinkedList.get(5))
 # print(myLinkedList.get(-2))  
 # myLinkedList.addAtIndex(1, 2)         
-myLinkedList.deleteAtIndex(3)
-myLinkedList.deleteAtIndex(5)
+# myLinkedList.deleteAtIndex(3)
+# myLinkedList.deleteAtIndex(5)
+# myLinkedList.view()
+myLinkedList.addAtTail(9)
 myLinkedList.view()     
-# print(myLinkedList.get(1))              
