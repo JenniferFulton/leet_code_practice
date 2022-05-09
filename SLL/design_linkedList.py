@@ -1,3 +1,11 @@
+# Implement the MyLinkedList class:
+# MyLinkedList() Initializes the MyLinkedList object.
+# get(int index) Get the value of the indexth node in the linked list. If the index is invalid, return -1.
+# addAtHead(int val) Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
+# addAtTail(int val) Append a node of value val as the last element of the linked list.
+# addAtIndex(int index, int val) Add a node of value val before the indexth node in the linked list. If index equals the length of the linked list, the node will be appended to the end of the linked list. If index is greater than the length, the node will not be inserted.
+# deleteAtIndex(int index) Delete the indexth node in the linked list, if the index is valid.
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -95,10 +103,10 @@ myLinkedList.view()
 # print(myLinkedList.get(1))
 # print(myLinkedList.get(3))
 # print(myLinkedList.get(5))
-# print(myLinkedList.get(-2))  
-# myLinkedList.addAtIndex(1, 2)         
+# print(myLinkedList.get(-2))          
 # myLinkedList.deleteAtIndex(3)
 # myLinkedList.deleteAtIndex(5)
 # myLinkedList.view()
 myLinkedList.addAtTail(9)
-myLinkedList.view()     
+myLinkedList.addAtIndex(1, 2) 
+myLinkedList.view()   
