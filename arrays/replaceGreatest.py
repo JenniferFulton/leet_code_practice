@@ -14,12 +14,14 @@
 
 def replaceElements(arr):
     last_index = len(arr)-1
-    greatest = arr[last_index]
+    greatest_val = arr[last_index]
     
     for i in range(last_index,-1,-1):
-        if arr[i-1] > greatest:
-            greatest = arr[i-1]
-            arr[i] = greatest
+        if greatest_val > arr[i-1]:
+            arr[i-1] = greatest_val
+        else:
+            greatest_val = arr[i-1]
+    arr[last_index] = -1
     print(arr)
 
 replaceElements([15,18,4,5,6,1,])
