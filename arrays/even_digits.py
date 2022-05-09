@@ -11,8 +11,6 @@
 # 7896 contains 4 digits (even number of digits). 
 # Therefore only 12 and 7896 contain an even number of digits.
 
-from typing_extensions import runtime
-
 
 def findNumbers(nums):
     evens = 0
