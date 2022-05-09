@@ -74,6 +74,7 @@ class MyLinkedList:
         while runner != None:
             if current_index == index:
                 previous_node.next = Node(val)
+                previous_node.next.next = runner
             current_index += 1
             previous_node = runner
             runner = runner.next
@@ -99,7 +100,7 @@ myLinkedList.addAtHead(7)
 myLinkedList.addAtHead(5)
 myLinkedList.addAtHead(3)
 myLinkedList.addAtHead(1)
-myLinkedList.view()   
+# myLinkedList.view()   
 # print(myLinkedList.get(1))
 # print(myLinkedList.get(3))
 # print(myLinkedList.get(5))
@@ -107,6 +108,6 @@ myLinkedList.view()
 # myLinkedList.deleteAtIndex(3)
 # myLinkedList.deleteAtIndex(5)
 # myLinkedList.view()
-myLinkedList.addAtTail(9)
+# myLinkedList.addAtTail(9)
 myLinkedList.addAtIndex(1, 2) 
 myLinkedList.view()   
