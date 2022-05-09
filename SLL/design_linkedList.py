@@ -69,22 +69,30 @@ class MyLinkedList:
             runner.next = Node(val)
 
     def addAtIndex(self, index: int, val: int) -> None:
-        current_index = 0
-        runner = self.head
-        while runner != None:
-            if current_index == index:
-                previous_node.next = Node(val)
-                previous_node.next.next = runner
-            current_index += 1
-            previous_node = runner
-            runner = runner.next
+        #if trying to add at index 0, essentially creating a new head
+        if index == 0:
+            new_head = Node(val)
+            new_head.next = self.head
+            self.head = new_head
         
-        # if index equals the length of the list append to the end of the list
-        if index == current_index:
+        #index other than 0
+        else:    
+            current_index = 0
             runner = self.head
-            while runner.next != None:
+            while runner != None:
+                if current_index == index:
+                    previous_node.next = Node(val)
+                    previous_node.next.next = runner
+                current_index += 1
+                previous_node = runner
                 runner = runner.next
-            runner.next = Node(val) 
+        
+            # if index equals the length of the list append to the end of the list
+            if index == current_index:
+                runner = self.head
+                while runner.next != None:
+                    runner = runner.next
+                runner.next = Node(val) 
 
     def deleteAtIndex(self, index: int) -> None:
         current_index = 0
@@ -113,6 +121,6 @@ myLinkedList.addAtHead(1)
 # myLinkedList.view()
 # myLinkedList.addAtTail(9)
 # myLinkedList.addAtIndex(1, 2)
-myLinkedList.addAtIndex(4,0) 
+myLinkedList.addAtIndex(0,20) 
 myLinkedList.addAtIndex(5,12) 
 myLinkedList.view()   
