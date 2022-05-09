@@ -76,7 +76,14 @@ class MyLinkedList:
         #     runner.next = Node(val)
 
     def deleteAtIndex(self, index: int) -> None:
-        pass
+        current_index = 0
+        runner = self.head
+        while runner != None:
+            if current_index == index:
+                previous_node.next = runner.next
+            current_index += 1
+            previous_node = runner
+            runner = runner.next
 
 
 # Your MyLinkedList object will be instantiated and called as such:
@@ -90,7 +97,8 @@ myLinkedList.view()
 # print(myLinkedList.get(3))
 # print(myLinkedList.get(5))
 # print(myLinkedList.get(-2))  
-myLinkedList.addAtIndex(1, 2)  
-myLinkedList.view()        
-# print(myLinkedList.deleteAtIndex(1))    
+# myLinkedList.addAtIndex(1, 2)         
+myLinkedList.deleteAtIndex(3)
+myLinkedList.deleteAtIndex(5)
+myLinkedList.view()     
 # print(myLinkedList.get(1))              
