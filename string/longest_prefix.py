@@ -17,13 +17,12 @@ def longestCommonPrefix(strs):
         if len(strs[i]) < shortest:
             shortest = len(strs[i])
     
-    i = 0
-    while i < shortest:
+    
+    for i in range(shortest):
         for j in range(len(strs)-1):
             if strs[j][i] != strs[j+1][i]:
                 return common_prefix
         common_prefix = common_prefix + strs[0][i]
-        i += 1
 
     return common_prefix
 
