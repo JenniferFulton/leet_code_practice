@@ -10,14 +10,14 @@ def countApplesAndOranges(s, t, a, b, apples, oranges):
     
     for i in apples:
         apple_fell = i + a
-        if apple_fell >= s and i <= t:
+        if apple_fell >= s and apple_fell <= t:
             house_apples += 1
     
     for i in oranges:
         orange_fell = i + b
-        if orange_fell >= s and i <= t:
+        if orange_fell >= s and orange_fell <= t:
             house_oranges += 1
             
-    print(house_oranges, house_oranges)
+    print(house_apples, house_oranges)
 
 countApplesAndOranges(7,10,4,12,[2,3,-4],[3,-2,-4])
